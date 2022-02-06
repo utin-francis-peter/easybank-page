@@ -37,7 +37,7 @@ HEADER NAVIGATIONS CUSTOM STYLING================
     background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 78%);;
 }
 
-.request-invite:hover{
+.request-invite:hover, .request-invite-header:hover{
     opacity: 70%;
 }
 
@@ -70,6 +70,82 @@ HEADER NAVIGATIONS CUSTOM STYLING================
 */
 
 
+/* 
+============================================
+SECTION 1 STYLING STARTS HERE================
+============================================
+*/
+
+.section1 .col1{
+    padding-right: 2em;
+}
+
+.section1 .col2{
+    background: url(/images/bg-intro-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 710px;
+    overflow: hidden;
+
+    height: 700px;
+    /* 
+    ================================
+    Applying a high z-index to col2 of section 1 so section 2 goes behind it as seen in the UI
+    */
+    z-index: 20;
+}
+
+
+/* 
+=============================
+Applying translation below to move the mobile icon images to the right and top
+*/
+
+.section1 .col2 img{
+    transform: translate(.2%, -13%);
+}
+
+
+
+/* 
+============================================
+SECTION 1 STYLING ENDS HERE================
+============================================
+*/
+
+
+/* 
+============================================
+SECTION 2 STYLING STARTS HERE================
+============================================
+*/
+.section2{
+    background: var(--light-grayish-blue);
+    padding-top: 3em;
+    padding-bottom: 2em;
+
+    /* 
+===================================
+Applying translation to section 2 below to move the parent container closer to col2 of section 1 as illlustrated in the provided UI design.
+*/
+transform: translateY(-25%);
+/* overflow-y: hidden; */
+/* 
+After applying translate
+*/
+}
+
+.why-us{
+    width: 50%;
+}
+
+/* 
+============================================
+SECTION 2 STYLING STARTS HERE================
+============================================
+*/
+
+
 
 
 
@@ -94,19 +170,67 @@ MEDIA QUERIES START HERE=======================
         text-align: center;
     }
 
-    .navbar-nav{
-        border: 2px solid black;
-        background: white;
-        
-        /* width: 80vw; */
-    }
-
     .request-invite-header{
         display: none;
     }
 
     .header-nav a:hover{
         border-bottom: none;
+    }
+
+    /* 
+    ===============================
+    section 1 styling
+    */
+    .section1{
+        margin-bottom: 5em;
+    }
+
+    .section1 .row{
+        flex-direction: column-reverse;
+    }
+
+    .section1 .col2 img{
+        width: 100%;
+        height: 400px;
+        transform: translateX(0);
+        transform: translateY(-29%);
+    }
+
+    .section1 .col2{
+        overflow-y: hidden;
+        z-index: 0;
+
+        background: url(/images/bg-intro-mobile.svg);
+        background-position: start;
+        background-repeat: no-repeat;
+        background-size: 280px;
+        overflow: hidden;
+
+        height: 300px;
+    }
+
+    .section1 .col1{
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* 
+    ================================
+    section 2 styling
+    */
+
+    .section2{
+        text-align: center;
+        transform: translateY(0);
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .why-us{
+        width: 100%;
+        text-align: center;
     }
 
 }
