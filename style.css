@@ -38,7 +38,7 @@ HEADER NAVIGATIONS CUSTOM STYLING================
 }
 
 .request-invite:hover, .request-invite-header:hover{
-    opacity: 70%;
+    opacity: 65%;
 }
 
 .navbar-expand-lg{
@@ -147,13 +147,89 @@ SECTION 2 STYLING STARTS HERE================
 
 
 
+/* 
+============================================
+SECTION 3 STYLING STARTS HERE================
+============================================
+*/
+.section3{
+    margin-top: -8em;
+    background: white;
+}
+
+.section3 .card-body{
+    background: white;
+}
+
+.section3 .card-title{
+    width: 110%;
+}
+
+.section3 .card-title:hover{
+   color: var(--limeGreen);
+   cursor: pointer;
+}
+
+/* 
+============================================
+SECTION 3 STYLING ENDS HERE================
+============================================
+*/
+
+
+/* 
+=============================================
+FOOTER STYLING STARTS HERE===================
+=============================================
+*/
+.footer{
+    background: rgb(45,49,78);
+}
+
+.footer-rights{
+    color: rgb(185, 180, 180);
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(185, 180, 180);
+    line-height: 2em;
+}
+
+.footer a:hover{
+    color: var(--limeGreen);
+}
+
+.footer-logo-container img{
+    width: 13px;
+}
+
+.footer-logo-container img:hover{
+    cursor: pointer;
+    background: #31d35c;
+}
+
+.footer .request-invite{
+    margin-left: 3em;
+}
+
+
+/* 
+=============================================
+FOOTER STYLING ENDS HERE===================
+=============================================
+*/
+
+
+
+
 
 
 
 
 /* 
 ===============================================
-MEDIA QUERIES START HERE=======================
+MEDIA QUERIES FOR MAX-WIDTH START HERE=======================
 ===============================================
 */
 @media screen and (max-width: 990px){
@@ -170,6 +246,7 @@ MEDIA QUERIES START HERE=======================
         text-align: center;
     }
 
+
     .request-invite-header{
         display: none;
     }
@@ -177,6 +254,8 @@ MEDIA QUERIES START HERE=======================
     .header-nav a:hover{
         border-bottom: none;
     }
+
+    
 
     /* 
     ===============================
@@ -216,6 +295,12 @@ MEDIA QUERIES START HERE=======================
         padding-right: 12px;
     }
 
+
+    
+
+
+    
+
     /* 
     ================================
     section 2 styling
@@ -232,8 +317,82 @@ MEDIA QUERIES START HERE=======================
         width: 100%;
         text-align: center;
     }
-
 }
+
+
+/* 
+    ================================
+    section 3 styling
+    */
+
+    .section3{
+        text-align: start;
+        background: var(--very-light-gray);
+    }
+
+    .section3 h2{
+        margin-top: 6em;
+        text-align: center;
+    }
+
+    .section3 .card-body{
+        padding-right: 3em;
+    }
+
+    .section3 .card-title{
+        width: 100%;
+    }
+
+    .section3 .card-a, .card-b, .card-c{
+        margin-bottom: 1.5em;
+    }
+
+
+    /* 
+        ================================
+        footer styling
+        */
+    .footer{
+        text-align: center;
+        padding-bottom: 2em;
+        margin-top: 2em;
+
+        padding-right: 48px;
+    }
+
+    .footer svg{
+        margin-bottom: 1em;
+    }
+
+    .footer .col3-navs{
+        margin-left: auto;
+        margin-top: -1em;
+    }
+
+    .footer-logo{
+        /* margin-right: -48px; */
+    }
+
+    .footer .request-invite{
+        margin-left: 0;
+    }
+
+    .bottom-content{
+        /* padding-left: 48px; */
+    }
+
+    .footer .request-invite{
+        /* margin-left: auto; */
+    }
+
+
+    .footer-logo-container{
+        display: flex;
+        justify-content: center;
+        gap: 1.5em;
+
+        margin-bottom: 1em;
+    }
 
 
 /* 
@@ -241,3 +400,45 @@ MEDIA QUERIES START HERE=======================
 MEDIA QUERIES ENDS HERE=======================
 ===============================================
 */
+
+
+
+/* 
+===============================================
+MEDIA QUERIES FOR MIN-WIDTH START HERE=======================
+===============================================
+*/
+@media screen and (min-width: 1000px){
+
+    .footer{
+        text-align: start;
+
+    }
+
+    .footer .col2-navs{
+        margin-left: 2em;
+        padding-top: 0;
+    }
+
+    .footer .col3-navs{
+        margin-left: -5em;
+        padding-top: 1em;
+    }
+
+    .bottom-content{
+        margin-left: -3em;
+    }
+
+    .footer-rights{
+        margin-left: -3em;
+    }
+
+    .footer-logo-container{
+        margin-left: 0;
+    }
+
+    .section3 h2{
+        margin-top: .5em;
+        text-align: left;
+    }
+}
